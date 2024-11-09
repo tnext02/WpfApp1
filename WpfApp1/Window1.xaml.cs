@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -22,6 +24,21 @@ namespace WpfApp1
         public Window1()
         {
             InitializeComponent();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog { Filter = "Image Files| *.JPG; *.JPEG; *.png;" };
+            if ( openFileDialog.ShowDialog() == true)
+            {
+               BitmapImage bitmapImage = new BitmapImage(new Uri(openFileDialog.FileName));
+                DisplayImage.Source = bitmapImage;
+            }
+            else
+            {
+                MessageBox.Show("не выбрана каринка");
+            }
+
         }
     }
 }

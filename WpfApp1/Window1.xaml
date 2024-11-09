@@ -8,6 +8,16 @@
         Title="Window1" Height="450" Width="800">
 
     <Grid>
-        <Image Source="\\sysprofiles.adm.vvsu.ru\STUDENTRPROFILES$\KochetovKE\Desktop\плов\кот.jpg" HorizontalAlignment="Left" Height="380" VerticalAlignment="Top" Width="794" Margin="191,22,-193,0"/>
+        <Menu Height="25" VerticalAlignment="top">
+            <MenuItem Header="file">
+                <MenuItem Header="open" Click="MenuItem_Click">
+                
+            </MenuItem>
+            <MenuItem Header="Save"></MenuItem>
+            <Separator></Separator>
+                <MenuItem Header="Exit" Click="MenuItem_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Image Name="DisplayImage" />
     </Grid>
 </Window>
