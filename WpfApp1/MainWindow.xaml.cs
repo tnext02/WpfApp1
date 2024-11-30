@@ -27,8 +27,8 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("hello world");
-            Window1 window = new Window1();
+            ;
+            Window2 window = new Window2();
             window.Show();
             this.Close();
         }
